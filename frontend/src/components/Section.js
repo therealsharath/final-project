@@ -8,8 +8,11 @@ class Section extends Component {
         return(
             <div className="sectionContainer">
                 <h1>{this.props.title}</h1>
-                <Card image={CatPic} name="Terry" breed="Domestic medium hair cross" status="Neutered, not vaccinated"
-                        gender="Male" yearsOld="2" />
+                <div className="pets">
+                    {this.props.animals[this.props.id].pets.map(petObject => (
+                        <Card image={CatPic} name={petObject.name} breed={petObject.breed} status={petObject.status} gender={petObject.gender} yearsOld={petObject.yearsOld} id = {petObject.id}/>
+                    ))}
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar'
-import Section from './components/Section'
+import Content from './components/Content'
 import './App.css';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <div>
       <Navbar />
       <div className="buffer"></div>
+      <Content />
     </div>
   );
 }

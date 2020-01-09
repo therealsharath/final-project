@@ -13,7 +13,7 @@ class Card extends Component {
                 <div className="cardContainer">
                     <img src={this.props.image} className="animal-photo"></img>
                     <div className="details">
-                        <h3>{this.props.name}</h3>
+                        <h2>{this.props.name}</h2>
                         <div className="detail">
                             <FontAwesomeIcon icon={faDog} className="icon" />
                             {this.props.breed}
@@ -27,7 +27,7 @@ class Card extends Component {
                             {this.props.gender}, {this.props.yearsOld} years old
                         </div>
                     </div>
-                    <a href="#" className="link">View more details   <FontAwesomeIcon icon={faArrowDown} /></a>
+                    <a href={"/" + this.props.id} className="link">View more details   <FontAwesomeIcon icon={faArrowDown} /></a>
                 </div>
             </div>
         )
